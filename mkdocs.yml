@@ -2,6 +2,8 @@ site_name: Sistemas Dinámicos
 
 theme:
   name: "material"
+  features: 
+    - content.code.copy
 
 nav:
   - index.md
