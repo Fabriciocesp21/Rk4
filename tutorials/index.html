@@ -1,0 +1,449 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../explanation/">
+      
+      
+        <link rel="next" href="../reference/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Tutorial - Sistemas Dinámicos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Sistemas Dinámicos" class="md-header__button md-logo" aria-label="Sistemas Dinámicos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sistemas Dinámicos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Sistemas Dinámicos" class="md-nav__button md-logo" aria-label="Sistemas Dinámicos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sistemas Dinámicos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Índice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../explanation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explicación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grafico-de-los-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráfico de los resultados
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Referencias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grafico-de-los-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráfico de los resultados
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tutorial">Tutorial</h1>
+<p>Asumamos que queremos estudiar la evolución temporal de un estado <span class="arithmatex">\(\mathbf{y}(t)\)</span>. Este estado será representado mediante una matriz 2x2 que corresponde a algún operador lineal. La función que genera la dinámica del problema es 
+$$
+f(t, \mathbf{y}) = -{\rm{i}} [\mathbf{O}, \mathbf{y}(t)],
+$$
+donde <span class="arithmatex">\(\mathbf{O}\)</span> es otro operador lineal, <span class="arithmatex">\({\rm{i}}\)</span> es la constante compleja y <span class="arithmatex">\([A, B] = AB - BA\)</span> es un operación de conmutación. Note que <strong>la función <span class="arithmatex">\(f(t, \mathbf{y})\)</span> no depende explícitamente de la variable temporal</strong>.</p>
+<p>La constante compleja se denota en <code>Python</code> de la siguiente manera:</p>
+<pre><code class="language-py">iConst = 1.0j
+</code></pre>
+<p>La dinámica del problema depende intrínsicamente del operador 𝐎. Escojamos el siguiente operador:</p>
+<pre><code class="language-py">import numpy as np
+
+oOper = np.array([[0, 1], [1, 0]])
+</code></pre>
+<p>Dicho operador puede tener distintos significados físicos dependiendo del problema dinámico en cuestión. Puede representar un mapa algebraico, el generador dinámico de un sistema caótico, un Hamiltoniano, etc. </p>
+<p>Lo siguiente es difinir un estado inicial. De igual forma, dicho estado puede representar cantidades físicas de un sistema. Consideremos:</p>
+<pre><code class="language-py">yInit = np.array([[1, 0], [0, 0]])
+</code></pre>
+<p>Note que el operador <span class="arithmatex">\(\mathbf{O}\)</span> no es diagonal, por lo cual esperamos que conforme avanza el tiempo, dicho operador modifica el estado <span class="arithmatex">\(\mathbf{y}(t)\)</span>.</p>
+<p>Implementemos la función <span class="arithmatex">\(f(t, \mathbf{y})\)</span> en <code>Python</code>. Para esto puede utilizar la función np.dot:</p>
+<pre><code class="language-py">def dyn_generator(oper, state):
+    return -1.0j * (np.dot(oper, state) - np.dot(state, oper))
+</code></pre>
+<p>Ahora tenemos que implementar la función que realiza la operación dinámica en <code>Python</code>, el método RK4:</p>
+<pre><code class="language-py">def rk4(func, oper, state, h):
+    k_1 = func(oper, state)
+    k_2 = func(oper, state+k_1/2)
+    k_3 = func(oper, state+k_2/2)
+    k_4 = func(oper, state+k_3)
+    return state + 1/6 * h * (k_1 + 2*k_2 + 2*k_3 + k_4)
+</code></pre>
+<p>(Puede ver la documentación de estas funciones en el aparatado de <a href="../reference/">referencias</a>)</p>
+<p>Con estas funciones a nuestra disposición, podemos evaluar la dinámica temporal en una grilla temporal unidimensional. Para ello, se utiliza la función np.linspace para generar un arreglo con valores temporales. Se emplea un valor final de tiempo en 10.0 s y la separación homogénea entre los elementos del arreglo puede variar según el valor que se le asigne a num.</p>
+<pre><code class="language-py">times = np.linspace(0.0, 10.0, num=500)
+
+h = times[1] - times[0]
+# h = 1/(num -1) 
+</code></pre>
+<p>Dependiendo del valor que se le asigne a <code>num</code>, el elemento <strong>h</strong> del método RK4 va a tener diferentes valores.</p>
+<p>Y, finalmente, llamamos de manera iterativa la rutina <code>rk4()</code>, calculando el operador del estado del sistema <span class="arithmatex">\(\mathbf{y}(t)\)</span> a través del tiempo. A través del tiempo, vamos a guardar la entrada <span class="arithmatex">\((0, 0)\)</span> y <span class="arithmatex">\((1, 1)\)</span> de la matriz <span class="arithmatex">\(\mathbf{y}(t)\)</span>. </p>
+<p>Para esto, vamos a inicializar dos arreglos que van a contener los valores con valores iniciales cero. Utilizamos el mismo tamaño del arreglo que contiene la variable independiente temporal: </p>
+<pre><code class="language-py">stateQuant00 = np.zeros(times.size)
+stateQuant11 = np.zeros(times.size)
+</code></pre>
+<p>Rutina principal: esta rutina realiza la evolución temporal.</p>
+<pre><code class="language-py">for tt in range(times.size):
+    # Se guarda el valor de las entradas (0,0) y (1,1) en los arreglos que se definieron.
+    stateQuant00[tt] = yInit[0,0].real
+    stateQuant11[tt] = yInit[1,1].real
+
+    # Se invoca rk4 operando sobre yInit
+    # Se devuelve el resultado a un nuevo yN
+    yN = rk4(dyn_generator, oOper, yInit, h)
+
+    # Ahora se asigna yN a yInit
+    # De esta manera, en la siguiente iteración, el operador de esta iteración se convierte en el inicial
+    # de la siguiente iteración
+    yInit = yN
+</code></pre>
+<h2 id="grafico-de-los-resultados">Gráfico de los resultados</h2>
+<p><img alt="El siguiente gráfico muestra el resultado del código implementado con los datos seleccionados anteriormente" src="../H.png" /> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
